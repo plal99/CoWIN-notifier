@@ -1,13 +1,15 @@
 # COVID VACCINE 18+ CHECKER WITH TELEGRAM NOTIFIER
 Hello again,
-This app is for checking the cowin site if vaccine for 18+ is available in the centers. All details regarding vaccine will be sent to your telegram. 
+This app is for checking the cowin site if vaccine for 18+ is available in the centers. All details regarding vaccine will be sent to your telegram every 2 minutes.
+
+Timings and code can be changed according to your needs.
 
 With simple modifications, you can change this to 
 - Get daily availability
 - Search by state
 - Search by district
 
-This whole project can be deployed in heroku easily
+This whole project can be deployed in heroku easily so that it can run 24x7.
 
 ## HOW IT WORKS
 It accesses the public API of COWIN for getting information regarding the vaccine.

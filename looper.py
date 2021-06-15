@@ -31,8 +31,8 @@ vaccine18 = {}
 vaccine45 = {}
 num = 0
 
-# Named it oneDistrict beacause it only checks the availability in ne district. Was planning to expand it to all
-# districts in kerala
+# Named it oneDistrict beacause it only checks the availability in one district. Was planning to expand it to all
+# districts in kerala. But you guys can do that now.
 
 
 def oneDistrict():
@@ -48,6 +48,12 @@ def oneDistrict():
 
         # To det the district
         districtCode = '303'
+
+
+        # The url request can be changed according to your need. I just wanted to check availability in my district only.
+        # By visiting the API site I gave in the README.md you can get different request that can be made
+
+
 
         # URL with district code and date (list of all district codes are listed at the bottom of code)
         url = "https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/calendarByDistrict?district_id="+districtCode+"&date="+date

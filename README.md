@@ -11,11 +11,9 @@ This whole project can be deployed in heroku easily
 
 ## HOW IT WORKS
 It accesses the public API of COWIN for getting information regarding the vaccine.
-
 The app is really simple. Data from API is recieved in JSON format and we just filter this data and creates some loops where if the min age limit is 18, telegram notifications are to be sent.
 
-To get information we just send a request to this site by varying parameters.
-
+By varying parameters like district and date, you can get different data in JSON format. Try the given link by changing to todays date in your browser and see the data.
 To get vaccination details for a single day for a district:
 #### `https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/findByDistrict?district_id=512&date=31-03-2021`
 

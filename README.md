@@ -31,7 +31,7 @@ For more details about API visit [here](https://apisetu.gov.in/public/marketplac
 - You have to create a telegram bot and get the `TELEGRAM_TOKEN` and `USER_ID`. `USER_ID` here is the chat ID. [How to make a telegram bot](https://medium.com/@ManHay_Hong/how-to-create-a-telegram-bot-and-send-messages-with-python-4cf314d9fa3e).
 - If you want to make a telegram group and notify all your friends then get the `GROUP_ID`. [Get group ID here](https://stackoverflow.com/questions/32423837/telegram-bot-how-to-get-a-group-chat-id)
 - Then create a .env file in this same directory and set `TELEGRAM_TOKEN` and `USER_ID`.
-- If you are in KERALA, all the district IDs are commented in the code. So make changes in the `districtCode` and voila!
+- If you are in KERALA, all the district IDs are commented in the code itself. So make changes in the `districtCode` and voila!
 - If you are not in KERALA, you have to first get the state code. I got the codes by visiting [here](https://cdn-api.co-vin.in/api/v2/admin/location/states). The result is printed below so you dont have to.
 ```{
     "states": [
@@ -187,5 +187,5 @@ For more details about API visit [here](https://apisetu.gov.in/public/marketplac
     "ttl": 24
 }```
 
-Then visit this website and change the state ID to yours and get your desired district codes.
-```https://cdn-api.co-vin.in/api/v2/admin/location/districts/16``` -- Change the 16 to your state code from above and get all the district codes. And then copy your desired district code and then voila!
+- Then copy this URL and change the state ID to yours and get your desired district codes.
+`https://cdn-api.co-vin.in/api/v2/admin/location/districts/16` -- (Change the 16 to your state code from above and get all the district codes. And then copy your desired district code and then make changes to `looper.py` voila!)

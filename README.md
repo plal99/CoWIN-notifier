@@ -17,10 +17,10 @@ The app is really simple. Data from API is recieved in JSON format and we just f
 To get information we just send a request to this site by varying parameters.
 
 To get vaccination details for a single day for a district:
-`#### https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/findByDistrict?district_id=512&date=31-03-2021`
+#### `https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/findByDistrict?district_id=512&date=31-03-2021`
 
 To get vaccine details for an entire week for a district:
-`#### https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/calendarByDistrict?district_id=303&date=01-05-2021`
+#### `https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/calendarByDistrict?district_id=303&date=01-05-2021`
 
 Similarly you can find many requests and all these can be found below.
 

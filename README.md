@@ -1,6 +1,6 @@
-# COVID VACCINE 18+ CHECKER WITH NOTIFIER
+# COVID VACCINE 18+ CHECKER WITH TELEGRAM NOTIFIER
 Hello again,
-This app is for checking the cowin site if vaccine for 18+ is available in the servers. You will get availability data for a week.
+This app is for checking the cowin site if vaccine for 18+ is available in the centers. All details regarding vaccine will be sent to your telegram. 
 
 With simple modifications, you can change this to 
 - Get daily availability
@@ -25,6 +25,15 @@ To get vaccine details for an entire week for a district:
 Similarly you can find many requests and all these can be found below.
 
 For more details about API visit [here](https://apisetu.gov.in/public/marketplace/api/cowin)
+
+## INFORMATION ABOUT EACH FILES
+- `.vscode`          : It is irrelevant and contains which python.exe should be run in my PC
+- `.env`             : It should contain `TELEGRAM_TOKEN` and `USER_ID` for working. Details are given below
+- `.gitignore`       : It has the content .env because .env contains all my tokens which should be private. So all the files mentioned inside .gitignore won't be uploaded to github. [More details](https://git-scm.com/docs/gitignore)
+- `looper.py`        : This is the main code file
+- `Procfile`         : The procfile is for heroku. Procfile should contain the name of the file that heroku should run in their servers.[More details](https://devcenter.heroku.com/articles/procfile)
+- `requirements.txt` : It contains all the modules we have to install for running the code locally as well as in heroku. But while deploying in heroku, after pushing, heroku itself will install all the modules inside requirements file
+- `README.md`        : You know what this is.
 
 ## WHAT YOU HAVE TO DO
 
@@ -188,5 +197,24 @@ For more details about API visit [here](https://apisetu.gov.in/public/marketplac
 }
 ```
 
-- Then copy this URL and change the state ID to yours and get your desired district codes.
-`https://cdn-api.co-vin.in/api/v2/admin/location/districts/16` -- (Change the 16 to your state code from above and get all the district codes. And then copy your desired district code and then make changes to `looper.py` voila!)
+- Then copy the URL given below to a browser and change the state ID to yours and get your desired district codes.
+`https://cdn-api.co-vin.in/api/v2/admin/location/districts/17` -- (Change the 17 to your state code from above and get all the district codes. And then copy your desired district code and then make changes to `looper.py` voila!)
+
+## HOW TO DEPLOY TO HEROKU
+> You need to first install the Heroku CLI and search about HEROKU. Heroku is a platform where you can host your codes so that it will run 24x7 free of cost. 
+
+**Deployment**
+ 1. `git clone https://github.com/plal99/CoWIN-notifier`
+ 2. `cd CoWIN-notifier`
+ 3. `pip install -r requirements.txt`
+ 4. Now through Heroku-CLI login to your Heroku account. 
+ `heroku login -i`
+ 5. Create a Heroku App `heroku create appname --buildpack heroku/python`
+ 6. You need to set your timezone on Heroku. `heroku config:add TZ="Asia/Kolkata"` change it to your timezone by using TZ="Your timezone". For India it is TZ="Asia/Kolkata"
+
+ 7. Initialize git repository  `git init`
+ 8. Select this app in your Heroku-CLI `heroku git:remote -a appname`
+ 9. Add all files to `git add .`
+ 10. Commit the changes `git commit -am "Your commit message"`
+ 11. Push Code to Heroku `git push heroku master`
+ 12. Scale the dynos `heroku ps:scale worker=1`
